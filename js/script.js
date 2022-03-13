@@ -22,6 +22,7 @@
             activeArticle.classList.remove('active');
         /* find id of article related to clicked link, then find it and show */
         const hrefAttribute = clickedElement.getAttribute('href');
+        // const hrefAttribute: string | null = clickedElement.getAttribute('href');
         const targetArticle = document.querySelector(hrefAttribute);
         if (targetArticle)
             targetArticle.classList.add('active');
@@ -105,7 +106,7 @@
             if (!allAuthors.includes(author)) {
                 allAuthors.push(author);
             }
-            /* create author link and add it  to article */
+            /* create author link and add it to article */
             const html = 'by <a href="#author-' + author + '">' + author + '</a>';
             articleAuthor.insertAdjacentHTML('beforeend', html);
         }
